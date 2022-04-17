@@ -1,0 +1,264 @@
+
+:root {
+    --darkest-color: #4c586f;
+    --lightest-color: #ebeced;
+    --border-color: lightblue;
+    --image-text: #4c586f;
+    --main-bg-color: lightgray;
+    --page-margin-left: 20%;
+    --page-margin-right: 20%;
+    --main-content-width: 100%;
+}
+
+html {
+    background-color: var(--lightest-color);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+    padding-bottom: 2%;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: var(--darkest-color);
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5% 0 0.5% 0;
+}
+
+#header-content {
+    display: flex;
+    max-width: 700px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+nav a {
+    color: var(--lightest-color);
+    font-size: 20px;
+    text-decoration: none;
+    padding: 0 4px 4px 4px;
+    border-bottom: 4px solid var(--lightest-color);
+}
+
+a:hover {
+    transform: scale(1.1);
+    color: lightblue;
+    border-color: lightblue;
+}
+
+.main-work-image-text a:hover {
+    transform: scale(1.1);
+    color: salmon;
+}
+
+img:hover {
+    opacity: 0.6;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50vh;
+    background-image: url(../img/seattle-skyline_ben-dutton.jpg);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-name {
+    color: var(--darkest-color);
+    display:flex;
+    font-size: 20px;
+    background-color: var(--lightest-color);
+    align-items: center;
+    padding: 15px;
+    border-radius: 5px 5px 5px 5px;
+    margin: 8%;
+}
+
+.job-title {
+    color: var(--darkest-color);
+    background-color: var(--lightest-color);
+    font-size: 25px;
+    padding: 10px;
+    margin-bottom: 110px;
+    border-radius: 5px;
+    width: 40%;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top: 20px;
+    margin: auto;
+    justify-content: center;
+    max-width: 700px;
+}
+
+.content-headers {
+    font-size: 30px;
+    margin-top: 4%;
+    border-bottom: 3px solid var(--darkest-color);
+    color: var(--darkest-color);
+}
+
+#about-me-header {
+}
+
+#about-me-content {
+    color: var(--darkest-color);
+    width: var(--main-content-width);
+    margin-top: 2%;
+}
+
+#work-content {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: var(--image-text);
+    width: var(--main-content-width);
+    margin-top: 2%;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.main-work {
+    position: relative;
+    width: 100%;
+}
+
+.main-work-image {
+    width: 100%;
+    height: auto;
+    border: 5px solid var(--border-color);
+}
+
+.main-work-image-text {
+    position: absolute;
+    background-color: var(--border-color);
+    padding: 20px;
+    align-self: flex-end;
+    bottom: 40px;
+}
+
+.main-work-image-text h3 {
+    font-size: 30px;
+    line-height: 40px;
+}
+
+#contact-me-content {
+    margin-top: 2%;
+    width: var(--main-content-width);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#contact-me-content a {
+    color: darkslategray;
+    font-size: 20px;
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 4px solid darkslategray;
+}
+  
+  @media screen and (max-width: 992px) {
+    
+    :root {
+        --page-margin-right: 2.5%;
+    }
+    
+    .title {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    nav {
+      width: 100%;
+      margin: 0;
+      justify-content: space-between;
+      padding: 2%;
+    }
+
+    nav a {
+        margin-left: 0;
+    }
+
+    .banner {
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sub-title {
+        margin: 0;
+        text-align: center;
+    }
+
+    main {
+        justify-content: center;
+    }
+
+    aside {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-right: 0;
+        border-bottom: 3px solid var(--darkest-color);
+        margin-top: 1%;
+        flex-direction: row;
+    }
+
+    aside h3 {
+        display: inline-block;
+        margin: 1%;
+    }
+
+    #about-me-content {
+        width: 100%;
+    }
+
+    #work-content {
+        width: 100%;
+    }
+
+    .sub-work {
+        width: 100%;
+    }
+
+    #contact-me-content {
+        width: 100%;
+    }
+
+  }
+
+  @media screen and (max-width: 769px) {
+
+    #contact-me-content a {
+        padding: 4px 4px 4px 4px;
+        margin: 4px; 
+    }
+}
